@@ -19,8 +19,8 @@ private Button button;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        try {
-            rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
+
+           /* rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
                 @Override
                 public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
                                                   int rightPinIndex, String leftPinValue, String rightPinValue) {
@@ -34,12 +34,7 @@ private Button button;
                     return null;
                 }
             });
-        } catch (RuntimeException e) {
-
-
-        }
-
-
+    */
         button = findViewById(R.id.b1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,5 +44,9 @@ private Button button;
 
             }
         });
+
     }
+
+
+
 }

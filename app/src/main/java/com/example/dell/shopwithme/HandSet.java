@@ -14,12 +14,12 @@ class HandSet {
 
 
 
-    public HandSet(String id, String model, String manufacturer, String price, String quantity, String image) {
-        this.id = id;
+    public HandSet( String model, String manufacturer, String price, String image) {
+
         this.model = model;
         this.manufacturer = manufacturer;
         this.price = price;
-        this.quantity = quantity;
+
         this.image = image;
 
     }
