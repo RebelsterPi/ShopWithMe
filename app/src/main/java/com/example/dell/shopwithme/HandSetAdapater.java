@@ -1,14 +1,11 @@
 package com.example.dell.shopwithme;
 
 import android.content.Context;
-import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -45,7 +42,7 @@ public class HandSetAdapater extends RecyclerView.Adapter<HandSetAdapater.HSView
 
     @Override
     public HandSetAdapater.HSViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        final View view = LayoutInflater.from(context).inflate(R.layout.content_main, parent, false);
+        final View view = LayoutInflater.from(context).inflate(R.layout.card_main, parent, false);
         return new HSViewHolder(view);
     }
 
