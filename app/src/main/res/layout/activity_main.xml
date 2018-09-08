@@ -18,7 +18,7 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="wrap_content"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
@@ -29,7 +29,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:layout_width="wrap_content"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/editText"
         android:layout_below="@+id/editText"
@@ -37,24 +37,23 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="model" />
+
     <com.appyvet.materialrangebar.RangeBar
-        android:layout_width="270dp"
+        android:id="@+id/rangeBar"
+        android:layout_width="225dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="16dp"
+        android:layout_alignStart="@+id/editText2"
         android:layout_below="@+id/editText2"
         app:mrb_pinMaxFont="20sp"
+        app:mrb_pinTextColor="#ACD123"
         app:mrb_rangeBarPaddingBottom="30dp"
         app:mrb_selectorBoundaryColor="@color/colorPrimary"
         app:mrb_selectorBoundarySize="10dp"
-        app:mrb_pinTextColor="#ACD123"
         app:mrb_selectorSize="10dp"
         app:mrb_temporaryPins="true"
         app:mrb_tickEnd="100"
         app:mrb_tickInterval="1"
-        app:mrb_tickStart="5"
-        android:id="@+id/rangeBar" />
+        app:mrb_tickStart="5" />
 
     <Button
         android:id="@+id/b1"
