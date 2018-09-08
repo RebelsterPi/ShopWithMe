@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">ShopWithMe</string>
+    <string name="app_name">ShopKart</string>
+    <string name="search">Search</string>
 </resources>
