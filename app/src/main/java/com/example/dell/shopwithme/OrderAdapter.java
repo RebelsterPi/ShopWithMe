@@ -1,5 +1,6 @@
 package com.example.dell.shopwithme;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -16,7 +17,10 @@ import java.util.List;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder>{
     private List<Order> orderList;
 
-    public void OrderList(List<Order>orderList){this.orderList=orderList;}
+    public OrderAdapter(Context applicationContext, List<Order> callorder) {
+    }
+
+    //public void callorder(List<Order>orderList){this.orderList=orderList;}
 
     @Override
     public OrderAdapter.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

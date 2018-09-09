@@ -22,6 +22,8 @@ public interface Api {
                                 @Query("price") String price,
                                 @Query("quantity") String quantity,
                                 @Query("image") String image);
+    @GET("buy")
+    Call<List<Order>>getorder();
 
     @GET("buy")
         Call<Order>getorder(@Query("model") String model,
