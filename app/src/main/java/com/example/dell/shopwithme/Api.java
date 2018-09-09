@@ -15,7 +15,9 @@ public interface Api {
     String BASE_URL = "https://bitnami-39xfosdmxa.appspot.com/";
     @GET("get-items")
     Call<List<HandSet>>getPhone(
-
     );
+    /*@GET("buy"){
+        Call<Buy>getbuy();
+    }*/
 
 }

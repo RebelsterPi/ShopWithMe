@@ -30,6 +30,14 @@ public class activity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_activity1);
 
+       /*intent*/
+        Intent intent = getIntent();
+
+        final String company = intent.getStringExtra("comp");
+        final String model = intent.getStringExtra("model");
+        final String min = intent.getStringExtra("minp");
+        final String max = intent.getStringExtra("maxp");
+      //  Toast.makeText(this,""+company, Toast.LENGTH_SHORT).show();
 
        /*ApiClient*/
         Retrofit retrofit = new Retrofit.Builder()
@@ -47,14 +55,31 @@ public class activity1 extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<HandSet>> call, Response<List<HandSet>> response) {
                 List<HandSet> phones = response.body();
-                for (HandSet hs : phones) {
-                    String model = hs.getModel();
-                    String manufacture = hs.getManufacturer();
-                    String price = hs.getPrice();
-                    String image = hs.getImage();
-                    phoneList.add(new HandSet(model, manufacture, price, image));
+               if(company==null&&model==null&&min==null&&max==null) {
+                   for (HandSet hs : phones) {
+                       String mod = hs.getModel();
+                       String manufacture = hs.getManufacturer();
+                       String price = hs.getPrice();
+                       String image = hs.getImage();
+                       phoneList.add(new HandSet(mod, manufacture, price, image));
+                   }
+               }
+               else if(company!=null || model!=null || min!=null || max!=null ){
+for(HandSet hs : phones){
+            String mod =hs.getModel();
+            String manufacture = hs.getManufacturer();
+            String price = hs.getPrice();
+            String image = hs.getImage();
+/*without price*/
+            if(manufacture.equals(company)&& model!=null){if(mod.equals(model)){new HandSet(mod, manufacture, price, image);}}
+                else if(manufacture.equals(company)&&model==null) {phoneList.add(new HandSet(mod, manufacture, price, image));}
+                else if(mod.equals(model)&&manufacture!=null ){phoneList.add(new HandSet(mod, manufacture, price, image));}
+}
 
-                }
+
+               }
+
+
                 rcv.setAdapter(new HandSetAdapater(getApplicationContext(), phoneList));
 
             }
@@ -70,7 +95,9 @@ public class activity1 extends AppCompatActivity {
         Intent startMain = new Intent(Intent.ACTION_MAIN);
         startMain.addCategory(Intent.CATEGORY_HOME);
         startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
         startActivity(startMain);
+        finish();
     }
     /*menu*/
 
