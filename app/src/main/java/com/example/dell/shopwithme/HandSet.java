@@ -8,13 +8,13 @@ class HandSet {
     private String id;
     private String model;
     private String manufacturer;
-    private String price;
+    private int price;
     private String quantity;
     private String image;
 
 
 
-    public HandSet( String model, String manufacturer, String price, String image) {
+    public HandSet( String model, String manufacturer, int price, String image) {
 
         this.model = model;
         this.manufacturer = manufacturer;
@@ -35,7 +35,7 @@ class HandSet {
         return manufacturer;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 

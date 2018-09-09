@@ -59,7 +59,7 @@ public class activity1 extends AppCompatActivity {
                    for (HandSet hs : phones) {
                        String mod = hs.getModel();
                        String manufacture = hs.getManufacturer();
-                       String price = hs.getPrice();
+                       int price = hs.getPrice();
                        String image = hs.getImage();
                        phoneList.add(new HandSet(mod, manufacture, price, image));
                    }
@@ -68,7 +68,7 @@ public class activity1 extends AppCompatActivity {
 for(HandSet hs : phones){
             String mod =hs.getModel();
             String manufacture = hs.getManufacturer();
-            String price = hs.getPrice();
+            int price = hs.getPrice();
             String image = hs.getImage();
 /*without price*/
             if(manufacture.equals(company)&& model!=null){if(mod.equals(model)){new HandSet(mod, manufacture, price, image);}}

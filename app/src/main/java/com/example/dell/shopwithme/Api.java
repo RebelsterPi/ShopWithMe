@@ -16,8 +16,8 @@ public interface Api {
     @GET("get-items")
     Call<List<HandSet>>getPhone(
     );
-    /*@GET("buy"){
-        Call<Buy>getbuy();
-    }*/
+    @GET("buy")
+        Call<Order>getorder();
+
 
 }
