@@ -52,7 +52,7 @@ public class HandSetAdapater extends RecyclerView.Adapter<HandSetAdapater.HSView
         Glide.with(holder.imgp.getContext()).load(phonelist.get(position).getImage()).into(holder.imgp);
         holder.model.setText(handset.getModel());
         holder.manufacture.setText(handset.getManufacturer());
-        holder.price.setText(handset.getPrice());
+        holder.price.setText(String.valueOf(handset.getPrice()));
 
 
     }

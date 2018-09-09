@@ -37,7 +37,6 @@ public class activity1 extends AppCompatActivity {
         final String model = intent.getStringExtra("model");
         final String min = intent.getStringExtra("minp");
         final String max = intent.getStringExtra("maxp");
-      //  Toast.makeText(this,""+company, Toast.LENGTH_SHORT).show();
 
        /*ApiClient*/
         Retrofit retrofit = new Retrofit.Builder()
@@ -59,19 +58,19 @@ public class activity1 extends AppCompatActivity {
                    for (HandSet hs : phones) {
                        String mod = hs.getModel();
                        String manufacture = hs.getManufacturer();
-                       int price = hs.getPrice();
+                       String price = hs.getPrice();
                        String imageLink = hs.getImage();
                        phoneList.add(new HandSet(mod, manufacture, price, imageLink));
                    }
                }
                else if(company!=null || model!=null || min!=null || max!=null ){
-for(HandSet hs : phones){
+             for(HandSet hs : phones){
             String mod =hs.getModel();
             String manufacture = hs.getManufacturer();
-            int price = hs.getPrice();
+            String price = hs.getPrice();
             String image = hs.getImage();
 /*without price*/
-            if(manufacture.equals(company)&& model!=null){if(mod.equals(model)){new HandSet(mod, manufacture, price, image);}}
+            if(manufacture.equals(company)&& model!=null){if(mod.equals(model)){phoneList.add(new HandSet(mod, manufacture, price, image));}}
                 else if(manufacture.equals(company)&&model==null) {phoneList.add(new HandSet(mod, manufacture, price, image));}
                 else if(mod.equals(model)&&manufacture!=null ){phoneList.add(new HandSet(mod, manufacture, price, image));}
                 }
@@ -88,11 +87,11 @@ for(HandSet hs : phones){
     }
 
     public void onBackPressed() {
-        Intent startMain = new Intent(Intent.ACTION_MAIN);
-        startMain.addCategory(Intent.CATEGORY_HOME);
-        startMain.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        Intent sm = new Intent(Intent.ACTION_MAIN);
+        sm.addCategory(Intent.CATEGORY_HOME);
+        sm.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
-        startActivity(startMain);
+        startActivity(sm);
         finish();
     }
     /*menu*/

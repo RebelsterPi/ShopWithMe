@@ -8,11 +8,12 @@ class Order {
 private String model;
 private String username;
 private int quantity;
+private String invoicenumber;
 
     public String getModel() {
         return model;
     }
-
+public String getInvoicenumber(){return invoicenumber;}
     public String getUsername() {
         return username;
     }
@@ -21,10 +22,10 @@ private int quantity;
         return quantity;
     }
 
-    public Order(String model, String username, int quantity) {
+    public Order(String model, String username, int quantity, String invoicenumber) {
         this.model = model;
         this.username = username;
         this.quantity = quantity;
-
+        this.invoicenumber = invoicenumber;
     }
 }
