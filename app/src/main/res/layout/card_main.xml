@@ -29,8 +29,6 @@
                 android:padding="10dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp" />
-
-
             <TextView
                 android:id="@+id/mod"
                 android:layout_width="match_parent"
@@ -39,7 +37,6 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:textAlignment="center" />
-
             <TextView
                 android:id="@+id/manu"
                 android:layout_width="match_parent"

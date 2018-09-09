@@ -14,7 +14,7 @@ import com.appyvet.materialrangebar.IRangeBarFormatter;
 import com.appyvet.materialrangebar.RangeBar;
 
 public class MainActivity extends AppCompatActivity {
-private RangeBar rangebar;
+
 private Button button;
 private EditText t1,t2,t3,t4;
      @Override
@@ -25,26 +25,7 @@ t1=findViewById(R.id.editText);
 t2=findViewById(R.id.editText2);
 t3=findViewById(R.id.editText3);
         t4=findViewById(R.id.editText4);
-         final String company,manuf,min,max;
-
-
-           /* rangebar.setOnRangeBarChangeListener(new RangeBar.OnRangeBarChangeListener() {
-                @Override
-                public void onRangeChangeListener(RangeBar rangeBar, int leftPinIndex,
-                                                  int rightPinIndex, String leftPinValue, String rightPinValue) {
-                }
-            });
-
-            rangebar.setFormatter(new IRangeBarFormatter() {
-                @Override
-                public String format(String s) {
-                    // Transform the String s here then return s
-                    return null;
-                }
-            });
-    */
-
-        button = findViewById(R.id.b1);
+            button = findViewById(R.id.b1);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

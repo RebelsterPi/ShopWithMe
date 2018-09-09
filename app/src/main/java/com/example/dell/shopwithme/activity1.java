@@ -74,12 +74,8 @@ for(HandSet hs : phones){
             if(manufacture.equals(company)&& model!=null){if(mod.equals(model)){new HandSet(mod, manufacture, price, image);}}
                 else if(manufacture.equals(company)&&model==null) {phoneList.add(new HandSet(mod, manufacture, price, image));}
                 else if(mod.equals(model)&&manufacture!=null ){phoneList.add(new HandSet(mod, manufacture, price, image));}
-}
-
-
-               }
-
-
+                }
+           }
                 rcv.setAdapter(new HandSetAdapater(getApplicationContext(), phoneList));
 
             }
