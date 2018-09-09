@@ -33,7 +33,7 @@ public class HandSetAdapater extends RecyclerView.Adapter<HandSetAdapater.HSView
 
         public HSViewHolder(View itemView) {
             super(itemView);
-            imgp = itemView.findViewById(R.id.img);
+            imgp = itemView.findViewById(R.id.image12);
             model = itemView.findViewById(R.id.mod);
             manufacture = itemView.findViewById(R.id.manu);
             price = itemView.findViewById(R.id.amt);
