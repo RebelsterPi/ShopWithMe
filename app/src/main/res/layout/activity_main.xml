@@ -34,7 +34,7 @@
         android:layout_alignStart="@+id/editText"
         android:layout_below="@+id/editText"
         android:layout_marginTop="11dp"
-        android:ems="10"
+
         android:inputType="textPersonName"
         android:hint="model" />
 
@@ -55,7 +55,7 @@
         android:layout_alignStart="@+id/editText2"
         android:layout_below="@+id/editText2"
         android:layout_marginTop="13dp"
-        android:ems="10"
+
         android:hint="min"
         android:inputType="textPersonName" />
 

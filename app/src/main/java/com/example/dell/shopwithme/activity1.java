@@ -60,8 +60,8 @@ public class activity1 extends AppCompatActivity {
                        String mod = hs.getModel();
                        String manufacture = hs.getManufacturer();
                        int price = hs.getPrice();
-                       String image = hs.getImage();
-                       phoneList.add(new HandSet(mod, manufacture, price, image));
+                       String imageLink = hs.getImage();
+                       phoneList.add(new HandSet(mod, manufacture, price, imageLink));
                    }
                }
                else if(company!=null || model!=null || min!=null || max!=null ){
