@@ -13,11 +13,9 @@ class HandSet {
     private String image;
 
     public HandSet(String model, String manufacturer, String price, String image) {
-        this.id = id;
         this.model = model;
         this.manufacturer = manufacturer;
         this.price = price;
-        this.quantity = quantity;
         this.image = image;
     }
 

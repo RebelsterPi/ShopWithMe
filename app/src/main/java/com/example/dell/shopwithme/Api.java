@@ -19,17 +19,19 @@ public interface Api {
     @GET("get-items")
     Call<List<HandSet>>getPhone(@Query("model") String model,
                                 @Query("manufacturer") String manufacture,
-                                @Query("price") String price,
-                                @Query("quantity") String quantity,
-                                @Query("image") String image);
+                                @Query("min") String min,
+                                @Query("max") String max
+                               );
     @GET("buy")
-    Call<List<Order>>getorder();
+    Call<Order>getorder();
 
     @GET("buy")
         Call<Order>getorder(@Query("model") String model,
-                            @Query("quantity") String quantity,
                             @Query("username") String username,
-                            @Query("invoiceNumber") String invoicenumber);
+                            @Query("qty") String quantity);
 
+    @GET("getSalesRecords")
+    Call<List<Order>> getPurchaces();
 
 }
+

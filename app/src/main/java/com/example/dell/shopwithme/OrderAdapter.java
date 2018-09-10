@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.ButterKnife;
+
 /**
  * Created by DELL on 09-09-2018.
  */
@@ -17,10 +19,8 @@ import java.util.List;
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder>{
     private List<Order> orderList;
 
-    public OrderAdapter(Context applicationContext, List<Order> callorder) {
+    public OrderAdapter( List<Order> orderList) {this.orderList=orderList;
     }
-
-    //public void callorder(List<Order>orderList){this.orderList=orderList;}
 
     @Override
     public OrderAdapter.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -45,7 +45,7 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
         public OrderViewHolder(View itemView) {
             super(itemView);
             model=itemView.findViewById(R.id.model_cart);
-                    username=itemView.findViewById(R.id.usern);
+            username=itemView.findViewById(R.id.usern);
             quantity=itemView.findViewById(R.id.quanti);
             invoice=itemView.findViewById(R.id.invoice);
         }
