@@ -71,7 +71,7 @@ public class activity1 extends AppCompatActivity {
         }
 
         call.enqueue(new Callback<List<HandSet>>() {
-            @Override
+             @Override
             public void onResponse(Call<List<HandSet>> call, Response<List<HandSet>> response) {
                Log.i("url",call.request().url().toString());
                 List<HandSet> phones = response.body();
