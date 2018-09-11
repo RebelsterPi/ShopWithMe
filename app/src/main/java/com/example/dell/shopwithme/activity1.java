@@ -27,7 +27,7 @@ import static java.lang.Integer.parseInt;
 
 public class activity1 extends AppCompatActivity {
     private RecyclerView rcv;
-    private List<HandSet> phoneList = new ArrayList<>();
+   // private List<HandSet> phoneList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -18,37 +18,27 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/model_cart"
-                android:layout_width="match_parent"
-
-                android:layout_height="wrap_content"
-
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/usern"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-
-                android:textAlignment="center" />
-
-            <TextView
-                android:id="@+id/quanti"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-
-
-                android:textAlignment="center" />
-
             <TextView
                 android:id="@+id/invoice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textAlignment="center"></TextView>
+                android:textAlignment="center"
+                android:text="hello"></TextView>
+            <TextView
+                android:id="@+id/model_cart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/usern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+            <TextView
+                android:id="@+id/quanti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
         </LinearLayout>
-
     </android.support.v7.widget.CardView>
 </RelativeLayout>

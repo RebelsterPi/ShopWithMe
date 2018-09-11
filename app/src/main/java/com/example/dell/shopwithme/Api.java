@@ -22,8 +22,8 @@ public interface Api {
                                 @Query("min") String min,
                                 @Query("max") String max
                                );
-    @GET("buy")
-    Call<Order>getorder();
+   // @GET("buy")
+    //Call<Order>getorder();
 
     @GET("buy")
         Call<Order>getorder(@Query("model") String model,

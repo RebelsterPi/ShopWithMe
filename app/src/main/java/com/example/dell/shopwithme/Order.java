@@ -20,11 +20,12 @@ private String invoicenumber;
     public int getQuantity() {
         return quantity;
     }
+    public Order(String model, String username, Integer quantity,String invoicenumber) {
 
-    public Order(String model, String username, int quantity) {
         this.model = model;
         this.username = username;
         this.quantity = quantity;
+        this.invoicenumber=invoicenumber;
 
     }
 }
