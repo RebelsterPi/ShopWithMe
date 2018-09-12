@@ -34,15 +34,17 @@ public class Sales extends AppCompatActivity {
 
         Api api= retrofit.create(Api.class);
         rcvcart=findViewById(R.id.rv_cart);
-        Call<List<Order>>call =api.getPurchaces();
+        Call<List<Order>>call;
+                call=api.getPurchaces();
 
 
         call.enqueue(new Callback<List<Order>>() {
             @Override
             public void onResponse(Call<List<Order>> call, Response<List<Order>> response) {
                  List<Order> orderList = response.body();
-                rcvcart.setLayoutManager(layout);
                 layout=new LinearLayoutManager(getApplicationContext());
+                rcvcart.setLayoutManager(layout);
+
 
                 oadapter=new OrderAdapter(getApplicationContext(),orderList);
                 rcvcart.setAdapter(oadapter);

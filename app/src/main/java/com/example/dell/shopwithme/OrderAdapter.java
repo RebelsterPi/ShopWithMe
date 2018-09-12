@@ -15,10 +15,10 @@ import java.util.List;
  */
 
 public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHolder>{
-    private List<Order> ol;
+    private List<Order> orderList;
     Context context;
     public OrderAdapter(Context context,List<Order> orderList) {
-        this.ol=orderList;
+        this.orderList=orderList;
         this.context=context;
     }
     public class OrderViewHolder extends RecyclerView.ViewHolder {
@@ -33,27 +33,25 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
 
     }
-//return new OrderAdapter.OrderViewHolder(LayoutInflater.from(context ).inflate(R.layout.card_cart,parent,false));
     @NonNull
    @Override
     public OrderAdapter.OrderViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(context).inflate(R.layout.card_cart,parent,false );
-        OrderAdapter.OrderViewHolder o=new OrderAdapter.OrderViewHolder(v);
-        return o;
+
+        return new OrderAdapter.OrderViewHolder(LayoutInflater.from(context ).inflate(R.layout.card_cart,parent,false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull OrderAdapter.OrderViewHolder holder, int position) {
-        holder.username.setText("Invoice : "+ol.get(position).getInvoicenumber());
-      holder.model.setText("Model : "+ol.get(position).getModel());
-      holder.quantity.setText("Quantity : "+ol.get(position).getQuantity());
-      holder.username.setText("Username : "+ol.get(position).getUsername());
+        holder.username.setText("Invoice : "+orderList.get(position).getInvoicenumber());
+      holder.model.setText("Model : "+orderList.get(position).getModel());
+      holder.quantity.setText("Quantity : "+orderList.get(position).getQuantity());
+      holder.username.setText("Username : "+orderList.get(position).getUsername());
 
     }
 
     @Override
     public int getItemCount() {
-        return ol.size();
+        return orderList.size();
     }
 
 

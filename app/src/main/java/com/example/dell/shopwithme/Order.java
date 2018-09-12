@@ -20,12 +20,16 @@ private String invoicenumber;
     public int getQuantity() {
         return quantity;
     }
-    public Order(String model, String username, Integer quantity,String invoicenumber) {
 
+    public Order(String model, String username, int quantity, String invoicenumber) {
         this.model = model;
         this.username = username;
         this.quantity = quantity;
-        this.invoicenumber=invoicenumber;
-
+        this.invoicenumber = invoicenumber;
     }
+
+
 }
+//  View v= LayoutInflater.from(context).inflate(R.layout.card_cart,parent,false );
+//OrderAdapter.OrderViewHolder o=new OrderAdapter.OrderViewHolder(v);
+// return o;

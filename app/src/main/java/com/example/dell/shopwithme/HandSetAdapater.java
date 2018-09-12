@@ -87,8 +87,8 @@ public class HandSetAdapater extends RecyclerView.Adapter<HandSetAdapater.HSView
                                 .baseUrl(Api.BASE_URL)
                                 .addConverterFactory(GsonConverterFactory.create())
                                 .build();
-                        Api api2 =retrofit.create(Api.class);
-                        Call<Order> call=api2.getorder(model ,user.getText().toString(), quan.getText().toString());
+                        Api api =retrofit.create(Api.class);
+                        Call<Order> call=api.getorder(model ,user.getText().toString(), quan.getText().toString());
                         call.enqueue(new Callback<Order>() {
                             @Override
                             public void onResponse(Call<Order> call, Response<Order> response) {
@@ -124,8 +124,4 @@ public class HandSetAdapater extends RecyclerView.Adapter<HandSetAdapater.HSView
     public int getItemCount() {
         return phonelist.size();
     }
-
-   // public void givingValue(final String phone){}
-
-
 }
