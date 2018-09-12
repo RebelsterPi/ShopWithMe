@@ -42,13 +42,12 @@ public class OrderAdapter extends RecyclerView.Adapter<OrderAdapter.OrderViewHol
 
     @Override
     public void onBindViewHolder(@NonNull OrderAdapter.OrderViewHolder holder, int position) {
-        holder.username.setText("Invoice : "+orderList.get(position).getInvoicenumber());
-      holder.model.setText("Model : "+orderList.get(position).getModel());
-      holder.quantity.setText("Quantity : "+orderList.get(position).getQuantity());
-      holder.username.setText("Username : "+orderList.get(position).getUsername());
+        holder.username.setText("Invoice : " + orderList.get(position).getInvoicenumber());
+        holder.model.setText("Model : " + orderList.get(position).getModel());
+        holder.quantity.setText("Quantity : " + orderList.get(position).getQuantity());
+        holder.username.setText("Username : " + orderList.get(position).getUsername());
 
     }
-
     @Override
     public int getItemCount() {
         return orderList.size();
